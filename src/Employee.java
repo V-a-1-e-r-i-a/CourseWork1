@@ -2,15 +2,15 @@ import java.util.Objects;
 
 public class Employee {
     private String name;
-    private String surnameName;
+    private String surName;
     private String patronymic;
     private int department;
     private double salary;
     private static int counter = 1;
     private int id;
-    public Employee (String name, String surnameName, String patronymic, int department, double salary){
+    public Employee (String name, String surName, String patronymic, int department, double salary){
         this.name = name;
-        this.surnameName = surnameName;
+        this.surName = surName;
         this.patronymic = patronymic;
         this.department =department;
         this.salary = salary;
@@ -20,8 +20,8 @@ public class Employee {
     public String getName(){
         return name;
     }
-    public String getSurnameName(){
-        return surnameName;
+    public String getSurName(){
+        return surName;
     }
     public String getPatronymic(){
         return patronymic;
@@ -47,7 +47,7 @@ public class Employee {
 
         @Override
     public String toString() {
-        return "ФИО сотрудника: " + name + surnameName + patronymic + "; " +
+        return "ФИО сотрудника: " + name + surName + patronymic + "; " +
                 "Отдел: " + department + "; " +
                 "Оклад: " + salary + " рублей; " +
                 "Номер в реестре: " + id;

@@ -4,7 +4,7 @@ public class Main {
         System.out.println("Курсовая работа");
 
         Employee[] employees = new Employee[10];
-        employees[0] = new Employee("Ника ", "Сидорова ","Давидовна", 1, 20_000);
+        employees[0] = new Employee("Ника ", "Сидорова ","Давидовна", 1, 22_00);
         employees[1] = new Employee("Никита ", "Смирнов ","Иванович", 2, 22_000);
         employees[2] = new Employee("Максим ", "Романов ","Артёмович", 3, 24_000);
         employees[3] = new Employee("Артём ", "Горюнов ","Максимович", 4, 33_000);
@@ -16,9 +16,9 @@ public class Main {
         employees[9] = new Employee("Валентина ", "Овчинникова ","Кирилловна", 5, 95_000);
 
         EmployeeService.listOfEmployee(employees);
-        EmployeeService.sumOfCosts(employees);
-        EmployeeService.minSalary(employees);
-        EmployeeService.maxSalary(employees);
+        System.out.println("Сумма затрат на зарплату за месяц: " +  EmployeeService.sumOfCosts(employees) + " рублей");
+        System.out.println("Минимальный оклад: " + EmployeeService.minSalary(employees) + " рублей");
+        System.out.println("Максимальный оклад: " + EmployeeService.maxSalary(employees) + " рублей");
         EmployeeService.midSalary(employees);
         EmployeeService.fullNameList(employees);
     }

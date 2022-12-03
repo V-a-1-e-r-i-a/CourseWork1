@@ -10,7 +10,7 @@ public class EmployeeService {
         }
     }
 
-    //Подсчёт и вывод общей суммы окладов
+    //Подсчёт общей суммы окладов
     public static double sumOfCosts(Employee[] employees) {
         double sum = 0;
         for (Employee employee : employees) {
@@ -18,11 +18,10 @@ public class EmployeeService {
                 sum += employee.getSalary();
             }
         }
-        System.out.println("Сумма затрат на зарплату за месяц: " + sum + " рублей");
         return sum;
     }
 
-    //Подсчёт и вывод минимального оклада
+    //Подсчёт минимального оклада
     public static double minSalary(Employee[] employees) {
         double minSalary = maxSalary(employees);
         for (Employee employee : employees) {
@@ -32,11 +31,10 @@ public class EmployeeService {
                 }
             }
         }
-        System.out.println("Минимальный оклад: " + minSalary + " рублей");
         return minSalary;
     }
 
-    //Поиск и вывод максимального оклада
+    //Поиск максимального оклада
     public static double maxSalary(Employee[] employees) {
         double maxSalary = 0;
         for (Employee employee : employees) {
@@ -46,7 +44,6 @@ public class EmployeeService {
                 }
             }
         }
-        System.out.println("Максимальный оклад: " + maxSalary + " рублей");
         return maxSalary;
     }
 
@@ -73,7 +70,7 @@ public class EmployeeService {
     public static void fullNameList(Employee[] employees) {
         for (Employee employee : employees) {
             if (employee != null) {
-                System.out.println("ФИО сотрудника: " + employee.getSurnameName() + employee.getName() + employee.getPatronymic());
+                System.out.println("ФИО сотрудника: " + employee.getSurName() + employee.getName() + employee.getPatronymic());
             }
         }
     }
